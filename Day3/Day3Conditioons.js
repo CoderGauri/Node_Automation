@@ -12,3 +12,14 @@ if(marks<40){
 else {
     console.log("passes");
 }
+
+let score = 85;
+if (score>= 90){
+    console.log("Grade A")
+}
+else if (score >=75){
+    console.log("Garde B");
+}
+else {
+    console.log("Gradde C")
+}
