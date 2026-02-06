@@ -12,5 +12,9 @@ app.get("/about", (req, res) => {
 app.get("/contact", (req, res) => {
   res.send("contact us");
 });
+app.get("/contact1", (req, res) => {
+  res.send("contact us");
+});
+
 
 app.listen(3000, () => console.log("port running on 3000"));
