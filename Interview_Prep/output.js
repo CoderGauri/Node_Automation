@@ -11,3 +11,11 @@ console.log("End"); // syunchronous
 //start
 //end
 //inside timeout
+
+function delayedTask () {
+    setTimeout(()=> {
+        console.log("delayed task exececute")
+    },2000)
+}
+
+delayedTask();
