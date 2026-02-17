@@ -1,21 +1,39 @@
-console.log("Start"); //synchronous
+const express =  require('express');
+const app = express();
 
-setTimeout(() => {
-  console.log("Inside Timeout"); //web api , call back queue , event loop will check
-  // if the call stack is empty it will execevuted 
-}, 0);
+app.use(express.json());
 
-console.log("End"); // syunchronous 
+const users = [{PName:"Joy" ,age:29 ,PID:1001 },
+    {PName:"Jim" ,age:39 ,PID:1002 },
+    {PName:"Joss" ,age:49 ,PID:1003 },
+]
 
-//output 
-//start
-//end
-//inside timeout
+app.get('/users' ,(req ,res) =>{
+    res.json(users);
+});
 
-function delayedTask () {
-    setTimeout(()=> {
-        console.log("delayed task exececute")
-    },2000)
-}
+// app.get('/users/:pid' , (req , res) = {
+//     const pid = parseInt(req.params.pid);
 
-delayedTask();
+//   const user = users.find(u => u.PID === pid);
+
+//     if(!users){
+//         return res.status(404).send("user not found ")
+//     }
+//     res.json(users);
+// })
+
+app.get('/users/:pid', (req, res) => {
+  const pid = parseInt(req.params.pid);
+
+  const user = users.find(u => u.PID === pid);
+
+  if (!user) {
+    return res.status(404).send("User not found");
+  }
+
+  res.json(user);
+});
+
+const PORT = 3000;
+app.listen(PORT , () => console.log(`Server is running on PORT ${PORT}`))
