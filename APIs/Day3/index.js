@@ -15,14 +15,19 @@ app.get("/Shop", (req, res) => {
 });
 //search filter
 app.get("/Shop/search", (req, res) => {
-    console.log("Query Received:",req.query)
-  const searchQuery = req.params.name;
-  if(!searchQuery){
-    return res.status(404).json({message :"please provode prduct name"})
-    const result = Shop.filter(searchQuery.toLowerCase())
-    res.json(result);
-  }
-})
+  console.log("Query Received:", req.query);
+  const searchQuery = req.query.name;
+  if (!searchQuery) {
+    return res.status(400).json({ message: "please provode prduct name" });
+   
+}
+ const result = Shop.filter((p) =>
+      p.pName.toLowerCase().includes(searchQuery.toLowerCase()),
+    );
+  
+  res.json(result);
+
+});
 const PORT = 3000;
 app.listen(PORT, () => {
   console.log("App runing on port 3000");
