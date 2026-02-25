@@ -1,0 +1,22 @@
+[
+  {
+    "id": "1",
+    "pName": "pen",
+    "pPrice": "30"
+  },
+  {
+    "id": 2,
+    "pName": "pencil",
+    "pPrice": "10 "
+  },
+  {
+    "id": "4",
+    "pName": "Marker",
+    "pPrice": 40
+  },
+  {
+    "id": "5",
+    "pName": "Scale",
+    "pPrice": 50
+  }
+]
