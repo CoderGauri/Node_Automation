@@ -1,0 +1,17 @@
+[
+  { "id":1, "name":"iPhone 15", "category":"Mobile", "price":80000, "brand":"Apple" },
+  { "id":2, "name":"Galaxy S23", "category":"Mobile", "price":75000, "brand":"Samsung" },
+  { "id":3, "name":"OnePlus 11", "category":"Mobile", "price":60000, "brand":"OnePlus" },
+  { "id":4, "name":"MacBook Air", "category":"Laptop", "price":110000, "brand":"Apple" },
+  { "id":5, "name":"Dell XPS", "category":"Laptop", "price":95000, "brand":"Dell" },
+  { "id":6, "name":"HP Pavilion", "category":"Laptop", "price":70000, "brand":"HP" },
+  { "id":7, "name":"iPad Pro", "category":"Tablet", "price":90000, "brand":"Apple" },
+  { "id":8, "name":"Galaxy Tab", "category":"Tablet", "price":65000, "brand":"Samsung" },
+  { "id":9, "name":"Boat Headphones", "category":"Accessories", "price":3000, "brand":"Boat" },
+  { "id":10, "name":"Sony WH-1000XM5", "category":"Accessories", "price":25000, "brand":"Sony" },
+  { "id":11, "name":"Logitech Mouse", "category":"Accessories", "price":1500, "brand":"Logitech" },
+  { "id":12, "name":"Asus ROG", "category":"Laptop", "price":130000, "brand":"Asus" },
+  { "id":13, "name":"Realme Narzo", "category":"Mobile", "price":15000, "brand":"Realme" },
+  { "id":14, "name":"Redmi Note 12", "category":"Mobile", "price":18000, "brand":"Xiaomi" },
+  { "id":15, "name":"Lenovo ThinkPad", "category":"Laptop", "price":105000, "brand":"Lenovo" }
+]
