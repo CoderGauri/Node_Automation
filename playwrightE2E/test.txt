@@ -1,0 +1,35 @@
+Test Case ID: TC_LOGIN_001
+Test Scenario: Verify that user is not able  to login with valid credentials.
+
+Precondition:
+- User is on the login page.
+- User has a valid username and password.
+
+Test Steps:
+1. Navigate to the login URL.
+2. Enter valid username.
+3. Enter valid password.
+4. Click on Login button.
+
+Expected Result:
+- User should be redirected to the dashboard.
+- Welcome message should be displayed.
+
+Test Case ID: TC_LOGIN_002
+Test Scenario: Verify that user is not able to login with invalid credentials.
+
+Precondition:
+- User is on the login page.
+- User has a invalid username and password.
+
+Test Steps:
+1. Navigate to the login URL.
+2. Enter invalid username.
+3. Enter invalid password.
+4. Click on Login button.
+
+Expected Result:
+-User should remain on the login page.
+- User should not be redirected to the dashboard.
+- Appropriate error message should be displayed (e.g., "Invalid username or password").
+- No user session should be created.
