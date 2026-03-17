@@ -5,6 +5,7 @@ export class LoginPage {
         this.password ='#password'
         this.loginButton = '#submit'
         this.successMessage = '.post-title'
+        this.errorMessage ='#error'
 }
     async navigate(){
         await this.page.goto('https://practicetestautomation.com/practice-test-login/')
@@ -23,5 +24,9 @@ export class LoginPage {
         await this.enterUsername(username)
         await this.enterPassword(password)
         await this.clickButton()
+    }
+
+    async getErrorMessage(){
+        return this.page.locator(this.errorMessage);
     }
 }
