@@ -2,6 +2,12 @@ import {test , expect} from '@playwright/test'
 import {LoginPage} from '../pages/LoginPage'
 import {loginData} from '../utils/testData'
 
+let loginPage
+
+test.beforeEach(async ({ page }) => {
+    loginPage = new LoginPage(page)
+    await loginPage.navigate()
+})
 test('@smoke Valid Login Test',async({page})=>{
 const loginPage = new LoginPage(page)
 await loginPage.navigate()
