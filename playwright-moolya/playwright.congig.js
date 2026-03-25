@@ -1,4 +1,5 @@
 import { defineConfig, devices } from '@playwright/test';
+import {ENV} from './utils/env'
 
 export default defineConfig({
   testDir: './tests',
@@ -8,6 +9,7 @@ export default defineConfig({
 
   use: {
     headless: false,
+    baseURL: ENV.baseURL
   },
 
   projects: [

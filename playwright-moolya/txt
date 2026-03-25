@@ -1,0 +1,30 @@
+import { test, expect } from '../fixtures/baseTest.js';
+import { loginData } from '../utils/testData.js';
+
+test.beforeEach(async ({ page }) => {
+  await page.goto('/web/index.php/auth/login');
+});
+
+test('Valid Login Test', async ({ loginPage, page }) => {
+
+  await page.goto('/web/index.php/auth/login');
+
+  await loginPage.login(
+    loginData.validUser.username,
+    loginData.validUser.password
+  );
+
+  await expect(page).toHaveURL(/dashboard/);
+});
+
+test('Invalid Login Test', async ({ loginPage, page }) => {
+
+  await page.goto('/web/index.php/auth/login');
+
+  await loginPage.login(
+    loginData.invalidUser.username,
+    loginData.invalidUser.password
+  );
+
+  await expect(page.getByText('Invalid credentials')).toBeVisible();
+});
