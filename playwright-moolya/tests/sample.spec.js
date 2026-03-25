@@ -8,11 +8,12 @@ import { test, expect } from '@playwright/test';
 //     await expect(page).toHaveTitle(/google/i)
 // })
 
-test('Login Test' , async({page})=>{
+test('Login Test', async ({ page }) => {
     await page.goto('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login');
-    await page.fill('input[name="username"]','Admin');
-    await page.fill('input[name="password"]','admin123');
-    await page.click('button[type ="submit"]')
-    await expect(page).toHaveURL(/Dashboard/i)
-
-})
+    await page.getByPlaceholder('Username').fill('Admin')
+    await page.getByPlaceholder('Password').fill('admin123')
+    await page.getByRole('button', { name: 'Login' }).click()
+    console.log(await page.url());
+    await expect(page).toHaveURL(/dashboard/);
+    await expect(page.getByRole('heading', { name: 'Dashboard' })).toBeVisible();
+});
