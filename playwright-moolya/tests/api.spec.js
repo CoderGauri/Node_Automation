@@ -1,11 +1,11 @@
-// import {test , expect} from '@playwright/test'
+import {test , expect} from '@playwright/test'
 
-// test('API test - Get Users' , async({request})=> {
-//    const response = await request.get('https://jsonplaceholder.typicode.com/users');
+test('API test - Get Users' , async({request})=> {
+   const response = await request.get('https://jsonplaceholder.typicode.com/users');
     
-//     expect(response.status()).toBe(200);
-//     const body = await response.json();
-//     console.log(body);
-//     expect(body.length).toBeGreaterThan(0);
+    expect(response.status()).toBe(200);
+    const body = await response.json();
+    console.log(body);
+    expect(body.length).toBeGreaterThan(0);
 
-// })
+})
